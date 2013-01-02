@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <div style = "margin-top: 250px;margin-left: 500px">
+        <input type="text"  style="width : 150px">
+        <p style="font-size: 14px">
+            <button onclick="location.href='index.html'">Submit</button>
+            Add New items
+        </p>
+    </div>
+</body>
+</html>

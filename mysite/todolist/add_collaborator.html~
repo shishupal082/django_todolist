@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Collaborator</title>
+</head>
+<body>
+    <div style = "margin-top: 250px;margin-left: 500px">
+        <input type="text"  style="width : 150px">
+        <p style="font-size: 14px; color: red">
+            <button onclick="location.href='/todolist/'">Submit</button>
+            Add New Collaborator
+        </p>
+    </div>
+</body>
+</html>
