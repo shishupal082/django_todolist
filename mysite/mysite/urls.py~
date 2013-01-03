@@ -14,7 +14,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     
-    #url(r'^todolist/', include('todolist.urls')),
+    url(r'^todolist/', include('todolist.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
 

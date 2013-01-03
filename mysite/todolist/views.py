@@ -1,5 +1,7 @@
-# Create your views here.
 
+from todolist.models import Projects
+from todolist.models import Collaborator
+from todolist.models import Task
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
     
@@ -15,7 +17,11 @@ def detail(request, todolist_id):
     #********************Project Start******************************************
     
 def index(request):
-    return render_to_response('index.html')
+    latest_project_list = Projects.objects.order_by('-project_name')
+    
+    #latest_collaborator_list = Collaborator.objects.order_by('-collaborator_name')
+    
+    return render_to_response('index.html',{'project_names':latest_project_list})
     
 def collaborator(request):
     return render_to_response('collaborator.html')
