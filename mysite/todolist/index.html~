@@ -22,29 +22,29 @@
                     <span >{{ p.project_name }}</span> Project
             </h1>
                     <div class="row">
-                        {% for c in collaborators %}
-                            <div class = "span2 collaborator" style = "width :220px; margin-left: 20px;">
+                        {% for c in p.collaborator_set.all %}
+                            <div class = "span3" style = "width :270px; margin-left: 20px;border: thin;border-style: dotted;">
                                 <p style="font-size: 20px;text-align: center;color: rgb(255,0,0);"> {{ c.collaborator_name }}</p>
                                 <ol>
-                                    {% for t in c.task_set.all %}
+                                {% for t in c.task_set.all %}
                                         <li>
                                             <p>
                                                 <input type="checkbox" checked="checked">
                                                 <span>{{ t.task_name }}</span>
                                             </p>
                                         </li>
-                                    {% endfor %}
+                                {% endfor %}
+                                   </ol>
                                     <p style="font-size: 14px">
                                         <button onclick="location.href='/todolist/task'">+Add</button>
                                         Add Task 
                                     </p>
-                                </ol>
                             </div>
                         {% endfor %}
                     <div class = "span2 collaborator" style = "width :210px; margin-left: 20px;">
                     <h2 style="color: red; font-size: 14px">
                     Add New Collaborator
-                    <button onclick="location.href='/todolist/collaborator'">+Add</button> 
+                    <button onclick="location.href='/admin/todolist/collaborator/add/'">+Add</button> 
                     </h2>      
             {% endfor %}        
             </div>

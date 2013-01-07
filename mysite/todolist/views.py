@@ -18,9 +18,6 @@ def detail(request, todolist_id):
     
 def index(request):
     latest_project_list = Projects.objects.order_by('-project_name')
-    
-    #latest_collaborator_list = Collaborator.objects.order_by('-collaborator_name')
-    
     return render_to_response('index.html',{'project_names':latest_project_list})
     
 def collaborator(request):

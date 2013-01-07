@@ -9,9 +9,10 @@ urlpatterns = patterns('',
     url(r'^results/(\d+)/$', views.results, name='results'),
     url(r'^results/(\d+)$', views.results, name='results'),
     
-    url(r'^(?P<todolist_id>\d+)/$', views.detail, name='detail'),
     url(r'^(?P<todolist_id>\d+)$', views.detail, name='detail'),
+    
     #********************Project Start******************************************
+    
     url(r'^$', views.index, name='index'),
     
     url(r'^collaborator$', views.collaborator, name='collaborator'), 
